@@ -51,7 +51,6 @@ class _ExtraCostState extends State<ExtraCost> {
     controller18.text = "0";
     controller20.text = "0";
 
-    // TODO: implement initState
     super.initState();
   }
 

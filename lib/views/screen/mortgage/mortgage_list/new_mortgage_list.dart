@@ -101,7 +101,7 @@ class _NewMortgageListState extends State<NewMortgageList> {
   void initState() {
     fetchNewMortgageData();
     InterestitialAdHelper().myInterestitialAd();
-    // TODO: implement initState
+  
     super.initState();
   }
 

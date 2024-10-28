@@ -19,7 +19,7 @@ class _MortgageOptionPageTwoState extends State<MortgageOptionPageTwo> {
   @override
   void initState() {
     InterestitialAdHelper().myInterestitialAd();
-    // TODO: implement initState
+  
     super.initState();
   }
 

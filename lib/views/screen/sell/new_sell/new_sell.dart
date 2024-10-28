@@ -1,3 +1,5 @@
+// ignore_for_file: unused_field
+
 import 'dart:io';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -142,7 +144,7 @@ class _NewSellState extends State<NewSell> {
     // _discountController.text = '0';
     // _payController.text = '0';
 
-    // TODO: implement initState
+
     super.initState();
   }
 

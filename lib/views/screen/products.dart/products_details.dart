@@ -18,7 +18,7 @@ class _ProductsDetailsState extends State<ProductsDetails> {
   @override
   void initState() {
   InterestitialAdHelper().myInterestitialAd();
-    // TODO: implement initState
+    
     super.initState();
   }
 

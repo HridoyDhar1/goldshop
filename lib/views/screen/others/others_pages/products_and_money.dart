@@ -122,7 +122,7 @@ class _ProductsAndMoneyState extends State<ProductsAndMoney> {
     controller50.text = "0";
     //  moneyController.text = "0";
 
-    // TODO: implement initState
+
     super.initState();
   }
 

@@ -136,7 +136,7 @@ class _NewMortgageState extends State<NewMortgage> {
     controller49.text = "0";
     controller50.text = "0";
 
-    // TODO: implement initState
+   
     super.initState();
   }
 

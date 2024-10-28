@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable, unused_field, override_on_non_overriding_member
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
