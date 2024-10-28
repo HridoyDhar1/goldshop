@@ -72,7 +72,7 @@ class CustomContainerTwo extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           const Text(
-            " Total Money",
+            " মোট টাকা ",
             style: TextStyle(
                 fontFamily: "itim", fontSize: 20, color: Colors.black),
           ),

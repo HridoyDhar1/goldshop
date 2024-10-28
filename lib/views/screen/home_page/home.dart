@@ -7,17 +7,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bounceable/flutter_bounceable.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gold_manager_update/helper/banner_ad_container.dart';
-import 'package:gold_manager_update/views/screen/ad_new_employee/employee.dart';
+
 import 'package:gold_manager_update/views/screen/buy/buy_list.dart';
 import 'package:gold_manager_update/views/screen/calculator/calculator.dart';
 import 'package:gold_manager_update/views/screen/employee_list/employee_list.dart';
-import 'package:gold_manager_update/views/screen/give_work/work_list.dart';
+
 import 'package:gold_manager_update/views/screen/income.dart/income_details.dart';
-import 'package:gold_manager_update/views/screen/mortgage/add_mortgage/mortgage_option_page.dart';
+
 import 'package:gold_manager_update/views/screen/mortgage/mortgage_list/mortgae_option.dart';
 import 'package:gold_manager_update/views/screen/others/others_options.dart';
 import 'package:gold_manager_update/views/screen/pay/pay_list.dart';
-import 'package:gold_manager_update/views/screen/sell/new_sell/new_sell.dart';
+
 import 'package:gold_manager_update/views/screen/sell/new_sell/sell_list.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
 import 'package:lottie/lottie.dart';
@@ -402,6 +402,7 @@ class _HomePageState extends State<HomePage> {
 
     return SafeArea(
         child: Scaffold(
+         
       body: StreamBuilder<QuerySnapshot>(
         stream: _userStream,
         builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
@@ -419,6 +420,7 @@ class _HomePageState extends State<HomePage> {
               Map<String, dynamic> data =
                   document.data()! as Map<String, dynamic>;
               return SingleChildScrollView(
+              
                 scrollDirection: Axis.vertical,
                 child: Column(
                   children: [
@@ -469,7 +471,7 @@ class _HomePageState extends State<HomePage> {
                                   },
                                   child: const CustomContainer(
                                       bottomText: "বন্ধক লিস্ট",
-                                      assetsName: "assets/images/mortage.png")),
+                                      assetsName: "assets/images/Loan.png")),
                               Bounceable(
                                   onTap: () {
                                     Navigator.push(
@@ -491,11 +493,11 @@ class _HomePageState extends State<HomePage> {
                                   },
                                   child: const CustomContainer(
                                       bottomText: "ইনকাম",
-                                      assetsName: "assets/images/income.png"))
+                                      assetsName: "assets/images/Income.png"))
                             ],
                           ),
                           SizedBox(
-                            height: 15.h,
+                            height: 20.h,
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -509,7 +511,7 @@ class _HomePageState extends State<HomePage> {
                                   },
                                   child: const CustomContainer(
                                       bottomText: "বিক্রি লিস্ট",
-                                      assetsName: "assets/images/sell.png")),
+                                      assetsName: "assets/images/Sell.png")),
                               Bounceable(
                                   onTap: () {
                                     Navigator.push(
@@ -519,11 +521,11 @@ class _HomePageState extends State<HomePage> {
                                   },
                                   child: const CustomContainer(
                                       bottomText: "টাকা দিয়েছেন",
-                                      assetsName: "assets/images/pay1.png"))
+                                      assetsName: "assets/images/pay.png"))
                             ],
                           ),
                           SizedBox(
-                            height: 15.h,
+                            height: 20.h,
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -549,7 +551,7 @@ class _HomePageState extends State<HomePage> {
                                   child: const CustomContainer(
                                       bottomText: "ক্যাকুলেটর",
                                       assetsName:
-                                          "assets/images/calculator.png")),
+                                          "assets/images/Calculator.png")),
                               Bounceable(
                                   onTap: () {
                                     Navigator.push(
@@ -559,11 +561,11 @@ class _HomePageState extends State<HomePage> {
                                   },
                                   child: const CustomContainer(
                                       bottomText: "কিনার লিস্ট",
-                                      assetsName: "assets/images/buy.png"))
+                                      assetsName: "assets/images/add-to-cart.png"))
                             ],
                           ),
                           SizedBox(
-                            height: 15.h,
+                            height: 20.h,
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -578,82 +580,7 @@ class _HomePageState extends State<HomePage> {
                                   child: const CustomContainer(
                                       bottomText: " কর্মচারী লিস্ট",
                                       assetsName:
-                                          "assets/images/Employees.png")),
-                              Bounceable(
-                                  onTap: () {
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (_) => WorkListPage()));
-                                  },
-                                  child: const CustomContainer(
-                                      bottomText: "কাজ করছে",
-                                      assetsName: "assets/images/work.jpg"))
-                            ],
-                          ),
-                          SizedBox(
-                            height: 15.h,
-                          ),
-                          Divider(),
-                          SizedBox(
-                            height: 15.h,
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Bounceable(
-                                  onTap: () {
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (_) =>
-                                                MortgageOptionPage()));
-                                  },
-                                  child: const CustomContainer(
-                                      bottomText: "নতুন বন্ধক",
-                                      assetsName:
-                                          "assets/images/new_mortage.png")),
-                              Bounceable(
-                                  onTap: () {
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (_) => NewSell()));
-                                  },
-                                  child: const CustomContainer(
-                                      bottomText: "নতুন বিক্রি ",
-                                      assetsName:
-                                          "assets/images/new_sell.png")),
-                              // Bounceable(
-                              //     onTap: () {
-                              //       Navigator.push(
-                              //           context,
-                              //           MaterialPageRoute(
-                              //               builder: (_) => Calculator()));
-                              //     },
-                              //     child: const CustomContainer(
-                              //         bottomText: "Calculator",
-                              //         assetsName:
-                              //             "assets/images/calculator.png"))
-                            ],
-                          ),
-                          SizedBox(
-                            height: 15.h,
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Bounceable(
-                                  onTap: () {
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (_) => AddNewEmployee()));
-                                  },
-                                  child: const CustomContainer(
-                                      bottomText: "নতুন কর্মচারী",
-                                      assetsName:
-                                          "assets/images/NewEmployee.png")),
+                                          "assets/images/teamwork.png")),
                               Bounceable(
                                   onTap: () {
                                     Navigator.push(
@@ -663,14 +590,10 @@ class _HomePageState extends State<HomePage> {
                                   },
                                   child: const CustomContainer(
                                       bottomText: "অন্যান",
-                                      assetsName:
-                                          "assets/images/shopping.png")),
+                                      assetsName: "assets/images/Delete.png"))
                             ],
                           ),
-
-                          SizedBox(
-                            height: 15.h,
-                          ),
+                   
                         ],
                       ),
                     ),
