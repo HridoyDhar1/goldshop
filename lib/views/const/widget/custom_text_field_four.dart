@@ -14,7 +14,7 @@ class _CustomTextFieldFourState extends State<CustomTextFieldFour> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 35.h,
+      height: 40.h,
       // decoration: BoxDecoration(
       //   borderRadius: BorderRadius.circular(10.r),
       // ),
@@ -30,15 +30,11 @@ class _CustomTextFieldFourState extends State<CustomTextFieldFour> {
           keyboardType: TextInputType.number,
           decoration: InputDecoration(
             border: OutlineInputBorder(
-              borderSide: BorderSide.none,
+            
               borderRadius: BorderRadius.circular(10.r)
             ),
-            focusedBorder: OutlineInputBorder(
-                borderSide: BorderSide.none,
-                borderRadius: BorderRadius.circular(10.r)
-            ),
-            fillColor: Colors.white,
-            filled: true,
+          
+          
             hintStyle: const TextStyle(color: Colors.grey),
           ),
         ),

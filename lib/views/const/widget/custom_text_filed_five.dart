@@ -33,15 +33,11 @@ class _CustomTextFieldFiveState extends State<CustomTextFieldFive> {
             
             border: OutlineInputBorder(
             
-              borderSide: BorderSide.none,
+            
               borderRadius: BorderRadius.circular(10.r)
             ),
-            focusedBorder: OutlineInputBorder(
-                borderSide: BorderSide.none,
-                borderRadius: BorderRadius.circular(10.r)
-            ),
-            fillColor: Colors.white,
-            filled: true,
+           
+       
             hintStyle: const TextStyle(color: Colors.grey),
           ),
           maxLines: 5,

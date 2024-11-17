@@ -5,9 +5,10 @@ import 'package:flutter_bounceable/flutter_bounceable.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:gold_manager_update/views/const/widget/custom_button.dart';
-import 'package:gold_manager_update/views/const/widget/custom_text_field_three.dart';
+
 import 'package:gold_manager_update/views/const/widget/custom_text_field_two.dart';
 import 'package:gold_manager_update/views/const/widget/date_picker.dart';
+import 'package:gold_manager_update/views/const/widget/product_text_field.dart';
 
 import '../../../const/Theme/all_text_style.dart';
 import '../../../const/Theme/app_color.dart';
@@ -28,6 +29,7 @@ class _NewMortgageState extends State<NewMortgage> {
   final _dateController = TextEditingController();
   final _productMoneyController = TextEditingController();
   final _percentController = TextEditingController();
+  final _carretController = TextEditingController();
   final _form = GlobalKey<FormState>();
 
   final controller1 = TextEditingController();
@@ -136,7 +138,6 @@ class _NewMortgageState extends State<NewMortgage> {
     controller49.text = "0";
     controller50.text = "0";
 
-   
     super.initState();
   }
 
@@ -594,9 +595,7 @@ class _NewMortgageState extends State<NewMortgage> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      
         child: Scaffold(
-          
       backgroundColor: Colors.white,
       appBar: AppBar(
         elevation: 0,
@@ -660,8 +659,8 @@ class _NewMortgageState extends State<NewMortgage> {
                           border: Border.all(color: Colors.grey)),
                       width: 150.w,
                       child: Center(
-                          child: CustomDatePicker(controller: _dateController)
-                          ),
+                          child:
+                              DatePickerTextField(controller: _dateController)),
                     ),
                     SizedBox(
                       height: 35.h,
@@ -678,488 +677,65 @@ class _NewMortgageState extends State<NewMortgage> {
                   ],
                 ),
                 SizedBox(height: 20.h),
-                Column(
-                  children: [
-                    textfield_count > 0
-                        ? Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              SizedBox(
-                                width: 100.w,
-                                child: CustomTextFieldThree(
-                                  labelText: "নাম",
-                                  keyBoardType: TextInputType.text,
-                                  controller: controller1,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 50.w,
-                                child: CustomTextFieldThree(
-                                  labelText: "ভরি",
-                                  keyBoardType: TextInputType.number,
-                                  controller: controller2,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 50.w,
-                                child: CustomTextFieldThree(
-                                  labelText: "আনা",
-                                  keyBoardType: TextInputType.number,
-                                  controller: controller3,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 50.w,
-                                child: CustomTextFieldThree(
-                                  labelText: "রত্তি",
-                                  keyBoardType: TextInputType.number,
-                                  controller: controller4,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 50.w,
-                                child: CustomTextFieldThree(
-                                  labelText: "পয়েন্ট",
-                                  keyBoardType: TextInputType.number,
-                                  controller: controller5,
-                                ),
-                              ),
-                            ],
-                          )
-                        : const SizedBox(),
-                    SizedBox(height: 20.h),
-                    textfield_count > 1
-                        ? Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              SizedBox(
-                                width: 100.w,
-                                child: CustomTextFieldThree(
-                                  labelText: "নাম",
-                                  keyBoardType: TextInputType.text,
-                                  controller: controller6,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 50.w,
-                                child: CustomTextFieldThree(
-                                  labelText: "ভরি",
-                                  keyBoardType: TextInputType.number,
-                                  controller: controller7,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 50.w,
-                                child: CustomTextFieldThree(
-                                  labelText: "আনা",
-                                  keyBoardType: TextInputType.number,
-                                  controller: controller8,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 50.w,
-                                child: CustomTextFieldThree(
-                                  labelText: "রত্তি",
-                                  keyBoardType: TextInputType.number,
-                                  controller: controller9,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 50.w,
-                                child: CustomTextFieldThree(
-                                  labelText: "পয়েন্ট",
-                                  keyBoardType: TextInputType.number,
-                                  controller: controller10,
-                                ),
-                              ),
-                            ],
-                          )
-                        : const SizedBox(),
-                    SizedBox(height: 20.h),
-                    textfield_count > 2
-                        ? Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              SizedBox(
-                                width: 100.w,
-                                child: CustomTextFieldThree(
-                                  labelText: "নাম",
-                                  keyBoardType: TextInputType.text,
-                                  controller: controller11,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 50.w,
-                                child: CustomTextFieldThree(
-                                  labelText: "ভরি",
-                                  keyBoardType: TextInputType.number,
-                                  controller: controller12,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 50.w,
-                                child: CustomTextFieldThree(
-                                  labelText: "আনা",
-                                  keyBoardType: TextInputType.number,
-                                  controller: controller13,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 50.w,
-                                child: CustomTextFieldThree(
-                                  labelText: "রত্তি",
-                                  keyBoardType: TextInputType.number,
-                                  controller: controller14,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 50.w,
-                                child: CustomTextFieldThree(
-                                  labelText: "পয়েন্ট",
-                                  keyBoardType: TextInputType.number,
-                                  controller: controller15,
-                                ),
-                              ),
-                            ],
-                          )
-                        : const SizedBox(),
-                    SizedBox(height: 20.h),
-                    textfield_count > 3
-                        ? Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              SizedBox(
-                                width: 100.w,
-                                child: CustomTextFieldThree(
-                                  labelText: "নাম",
-                                  keyBoardType: TextInputType.text,
-                                  controller: controller16,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 50.w,
-                                child: CustomTextFieldThree(
-                                  labelText: "ভরি",
-                                  keyBoardType: TextInputType.number,
-                                  controller: controller17,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 50.w,
-                                child: CustomTextFieldThree(
-                                  labelText: "আনা",
-                                  keyBoardType: TextInputType.number,
-                                  controller: controller18,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 50.w,
-                                child: CustomTextFieldThree(
-                                  labelText: "রত্তি",
-                                  keyBoardType: TextInputType.number,
-                                  controller: controller19,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 50.w,
-                                child: CustomTextFieldThree(
-                                  labelText: "পয়েন্ট",
-                                  keyBoardType: TextInputType.number,
-                                  controller: controller20,
-                                ),
-                              ),
-                            ],
-                          )
-                        : const SizedBox(),
-                    SizedBox(height: 20.h),
-                    textfield_count > 4
-                        ? Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              SizedBox(
-                                width: 100.w,
-                                child: CustomTextFieldThree(
-                                  labelText: "নাম",
-                                  keyBoardType: TextInputType.text,
-                                  controller: controller21,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 50.w,
-                                child: CustomTextFieldThree(
-                                  labelText: "ভরি",
-                                  keyBoardType: TextInputType.number,
-                                  controller: controller22,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 50.w,
-                                child: CustomTextFieldThree(
-                                  labelText: "আনা",
-                                  keyBoardType: TextInputType.number,
-                                  controller: controller23,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 50.w,
-                                child: CustomTextFieldThree(
-                                  labelText: "রত্তি",
-                                  keyBoardType: TextInputType.number,
-                                  controller: controller24,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 50.w,
-                                child: CustomTextFieldThree(
-                                  labelText: "পয়েন্ট",
-                                  keyBoardType: TextInputType.number,
-                                  controller: controller25,
-                                ),
-                              ),
-                            ],
-                          )
-                        : const SizedBox(),
-                    SizedBox(height: 20.h),
-                    textfield_count > 5
-                        ? Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              SizedBox(
-                                width: 100.w,
-                                child: CustomTextFieldThree(
-                                  labelText: "নাম",
-                                  keyBoardType: TextInputType.text,
-                                  controller: controller26,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 50.w,
-                                child: CustomTextFieldThree(
-                                  labelText: "ভরি",
-                                  keyBoardType: TextInputType.number,
-                                  controller: controller27,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 50.w,
-                                child: CustomTextFieldThree(
-                                  labelText: "আনা",
-                                  keyBoardType: TextInputType.number,
-                                  controller: controller28,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 50.w,
-                                child: CustomTextFieldThree(
-                                  labelText: "রত্তি",
-                                  keyBoardType: TextInputType.number,
-                                  controller: controller29,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 50.w,
-                                child: CustomTextFieldThree(
-                                  labelText: "পয়েন্ট",
-                                  keyBoardType: TextInputType.number,
-                                  controller: controller30,
-                                ),
-                              ),
-                            ],
-                          )
-                        : const SizedBox(),
-                    SizedBox(height: 20.h),
-                    textfield_count > 6
-                        ? Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              SizedBox(
-                                width: 100.w,
-                                child: CustomTextFieldThree(
-                                  labelText: "নাম",
-                                  keyBoardType: TextInputType.text,
-                                  controller: controller31,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 50.w,
-                                child: CustomTextFieldThree(
-                                  labelText: "ভরি",
-                                  keyBoardType: TextInputType.number,
-                                  controller: controller32,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 50.w,
-                                child: CustomTextFieldThree(
-                                  labelText: "আনা",
-                                  keyBoardType: TextInputType.number,
-                                  controller: controller33,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 50.w,
-                                child: CustomTextFieldThree(
-                                  labelText: "রত্তি",
-                                  keyBoardType: TextInputType.number,
-                                  controller: controller34,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 50.w,
-                                child: CustomTextFieldThree(
-                                  labelText: "পয়েন্ট",
-                                  keyBoardType: TextInputType.number,
-                                  controller: controller35,
-                                ),
-                              ),
-                            ],
-                          )
-                        : const SizedBox(),
-                    SizedBox(height: 20.h),
-                    textfield_count > 7
-                        ? Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              SizedBox(
-                                width: 100.w,
-                                child: CustomTextFieldThree(
-                                  labelText: "নাম",
-                                  keyBoardType: TextInputType.text,
-                                  controller: controller36,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 50.w,
-                                child: CustomTextFieldThree(
-                                  labelText: "ভরি",
-                                  keyBoardType: TextInputType.number,
-                                  controller: controller37,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 50.w,
-                                child: CustomTextFieldThree(
-                                  labelText: "আনা",
-                                  keyBoardType: TextInputType.number,
-                                  controller: controller38,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 50.w,
-                                child: CustomTextFieldThree(
-                                  labelText: "রত্তি",
-                                  keyBoardType: TextInputType.number,
-                                  controller: controller39,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 50.w,
-                                child: CustomTextFieldThree(
-                                  labelText: "পয়েন্ট",
-                                  keyBoardType: TextInputType.number,
-                                  controller: controller40,
-                                ),
-                              ),
-                            ],
-                          )
-                        : const SizedBox(),
-                    SizedBox(height: 20.h),
-                    textfield_count > 8
-                        ? Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              SizedBox(
-                                width: 100.w,
-                                child: CustomTextFieldThree(
-                                  labelText: "নাম",
-                                  keyBoardType: TextInputType.text,
-                                  controller: controller41,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 50.w,
-                                child: CustomTextFieldThree(
-                                  labelText: "ভরি",
-                                  keyBoardType: TextInputType.number,
-                                  controller: controller42,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 50.w,
-                                child: CustomTextFieldThree(
-                                  labelText: "আনা",
-                                  keyBoardType: TextInputType.number,
-                                  controller: controller43,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 50.w,
-                                child: CustomTextFieldThree(
-                                  labelText: "রত্তি",
-                                  keyBoardType: TextInputType.number,
-                                  controller: controller44,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 50.w,
-                                child: CustomTextFieldThree(
-                                  labelText: "পয়েন্ট",
-                                  keyBoardType: TextInputType.number,
-                                  controller: controller45,
-                                ),
-                              ),
-                            ],
-                          )
-                        : const SizedBox(),
-                    SizedBox(height: 20.h),
-                    textfield_count > 9
-                        ? Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              SizedBox(
-                                width: 100.w,
-                                child: CustomTextFieldThree(
-                                  labelText: "নাম",
-                                  keyBoardType: TextInputType.text,
-                                  controller: controller46,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 50.w,
-                                child: CustomTextFieldThree(
-                                  labelText: "ভরি",
-                                  keyBoardType: TextInputType.number,
-                                  controller: controller47,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 50.w,
-                                child: CustomTextFieldThree(
-                                  labelText: "আনা",
-                                  keyBoardType: TextInputType.number,
-                                  controller: controller48,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 50.w,
-                                child: CustomTextFieldThree(
-                                  labelText: "রত্তি",
-                                  keyBoardType: TextInputType.number,
-                                  controller: controller49,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 50.w,
-                                child: CustomTextFieldThree(
-                                  labelText: "পয়েন্ট",
-                                  keyBoardType: TextInputType.number,
-                                  controller: controller50,
-                                ),
-                              ),
-                            ],
-                          )
-                        : const SizedBox(),
-                  ],
+                productTextField(
+                  textfield_count: textfield_count,
+                  controller1: controller1,
+                  controller2: controller2,
+                  controller3: controller3,
+                  controller4: controller4,
+                  controller5: controller5,
+                  controller6: controller6,
+                  controller7: controller7,
+                  controller8: controller8,
+                  controller9: controller9,
+                  controller10: controller10,
+                  controller41: controller41,
+                  controller12: controller12,
+                  controller13: controller13,
+                  controller14: controller14,
+                  controller15: controller15,
+                  controller17: controller17,
+                  controller18: controller18,
+                  controller19: controller19,
+                  controller20: controller20,
+                  controller22: controller22,
+                  controller23: controller23,
+                  controller24: controller24,
+                  controller25: controller25,
+                  controller27: controller27,
+                  controller28: controller28,
+                  controller29: controller29,
+                  controller30: controller30,
+                  controller32: controller32,
+                  controller33: controller33,
+                  controller34: controller34,
+                  controller35: controller35,
+                  controller37: controller37,
+                  controller38: controller38,
+                  controller39: controller39,
+                  controller40: controller40,
+                  controller42: controller42,
+                  controller43: controller43,
+                  controller44: controller44,
+                  controller45: controller45,
+                  controller46: controller46,
+                  controller47: controller47,
+                  controller48: controller48,
+                  controller49: controller49,
+                  controller50: controller50,
+                  carretController: _carretController,
+                  carretController1: _carretController,
+                  carretController2: _carretController,
+                  carretController3: _carretController,
+                  carretController4: _carretController,
+                  carretController5: _carretController,
+                  carretController6: _carretController,
+                  carretController7: _carretController,
+                  carretController8: _carretController,
+                  carretController9: _carretController,
+                  carretController10: _carretController,
+                  carretController11: _carretController,
+                  carretController12: _carretController
                 ),
                 const Divider(),
                 SizedBox(

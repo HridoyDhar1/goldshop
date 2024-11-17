@@ -2,7 +2,8 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:gold_manager_update/views/screen/splash_screen/splash.dart';
+
+import 'package:gold_manager_update/views/screen/splash_screen/splash_screen.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 void main() async {
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
     return ScreenUtilInit(builder: (_, child) {
       return const MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: SplashScreen(),
+        home: SplashScreenOne(),
       );
     });
   }

@@ -136,7 +136,7 @@ class _NewMortgageListState extends State<NewMortgageList> {
               color: Colors.black,
             )),
         title: Text(
-          "বন্ধকের লিস্ট : ${newMortgageList.length.toString()}",
+          "Mortgage List : ${newMortgageList.length.toString()}",
           style: AllTextStyle().employeeName,
         ),
       ),

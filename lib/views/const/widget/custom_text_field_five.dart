@@ -30,10 +30,12 @@ class CustomTextFieldFive extends StatelessWidget {
       controller: controller,
       keyboardType: keyboardType,
       decoration: InputDecoration(
-        border: InputBorder.none,
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(10)
+        ),
         focusedBorder: InputBorder.none,
-        fillColor: Colors.white,
-        filled: true,
+     
+ 
         hintText: childText,
         prefixIcon: prefixIcon,
         hintStyle: const TextStyle(color: Colors.grey),

@@ -31,10 +31,11 @@ class CustomTextFieldTwo extends StatelessWidget {
       controller: controller,
       keyboardType: keyboardType,
       decoration: InputDecoration(
-        border: InputBorder.none,
+
+        border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
         focusedBorder: InputBorder.none,
         fillColor: AppColor.textFieldBgColor,
-        filled: true,
+        // filled: true,
         hintText: childText,
         prefixIcon: prefixIcon,
         hintStyle: const TextStyle(color: Colors.grey),

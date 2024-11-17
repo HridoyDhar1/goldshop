@@ -130,7 +130,7 @@ class _NewMortgageListDetailsPageState
               SizedBox(height: 10.h),
               Text("Date : ${widget.newMortgageDetails["date"]}",
                   style: AllTextStyle().goldName),
-
+      
               SizedBox(height: 20.h),
               Align(
                 alignment: Alignment.center,
@@ -147,7 +147,7 @@ class _NewMortgageListDetailsPageState
                 ),
               ),
               SizedBox(height: 20.h),
-
+      
               widget.newMortgageDetails["first_vori"] != "0"
                   ? Container(
                       decoration: BoxDecoration(
@@ -229,7 +229,7 @@ class _NewMortgageListDetailsPageState
                       ),
                     )
                   : const SizedBox(),
-
+      
               SizedBox(height: 10.h),
               widget.newMortgageDetails["four_vori"] != "0"
                   ? Container(
@@ -257,7 +257,7 @@ class _NewMortgageListDetailsPageState
                       ),
                     )
                   : const SizedBox(),
-
+      
               SizedBox(height: 10.h),
               widget.newMortgageDetails["five_vori"] != "0"
                   ? Container(
@@ -285,7 +285,7 @@ class _NewMortgageListDetailsPageState
                       ),
                     )
                   : const SizedBox(),
-
+      
               SizedBox(height: 10.h),
               widget.newMortgageDetails["six_vori"] != "0"
                   ? Container(
@@ -313,7 +313,7 @@ class _NewMortgageListDetailsPageState
                       ),
                     )
                   : const SizedBox(),
-
+      
               SizedBox(height: 10.h),
               widget.newMortgageDetails["seven_vori"] != "0"
                   ? Container(
@@ -341,7 +341,7 @@ class _NewMortgageListDetailsPageState
                       ),
                     )
                   : const SizedBox(),
-
+      
               SizedBox(height: 10.h),
               widget.newMortgageDetails["eight_vori"] != "0"
                   ? Container(
@@ -396,7 +396,7 @@ class _NewMortgageListDetailsPageState
                       ),
                     )
                   : const SizedBox(),
-
+      
               SizedBox(height: 10.h),
               widget.newMortgageDetails["ten_vori"] != "0"
                   ? Container(
@@ -424,7 +424,7 @@ class _NewMortgageListDetailsPageState
                       ),
                     )
                   : const SizedBox(),
-
+      
               SizedBox(height: 20.h),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -450,7 +450,7 @@ class _NewMortgageListDetailsPageState
               //   ),
               // ),
               // SizedBox(height: 40.h),
-
+      
               Visibility(
                 visible: _payVisible,
                 child: Row(

@@ -577,7 +577,7 @@ class _ProductsAndMoneyState extends State<ProductsAndMoney> {
   }
 
   int textfield_count = 1;
-  bool _containerVisible = false;
+  // bool _containerVisible = false;
 
   @override
   Widget build(BuildContext context) {
@@ -1181,14 +1181,14 @@ class _ProductsAndMoneyState extends State<ProductsAndMoney> {
           ),
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-          backgroundColor: const Color(0xff42EA92),
-          child: const Icon(Icons.add),
-          onPressed: () {
-            setState(() {
-              _containerVisible = !_containerVisible;
-            });
-          }),
+      // floatingActionButton: FloatingActionButton(
+      //     backgroundColor: const Color(0xff42EA92),
+      //     child: const Icon(Icons.add),
+      //     onPressed: () {
+      //       setState(() {
+      //         _containerVisible = !_containerVisible;
+      //       });
+      //     }),
     );
   }
 }

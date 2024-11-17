@@ -44,7 +44,7 @@ class _MortgagePayListPageState extends State<MortgagePayListPage> {
               color: Colors.black,
             )),
         title: Text(
-          "বন্ধক টাকা জমা দেয়া",
+          "Mortgage Pay",
           style: AllTextStyle().employeeName,
         ),
       ),
@@ -73,13 +73,36 @@ class _MortgagePayListPageState extends State<MortgagePayListPage> {
                     document.data() as Map<String, dynamic>;
                 return Padding(
                   padding: EdgeInsets.all(05.w),
-                  child: Card(
+                  child: Container(
+                    height: 80,
+                    width: 200,
+                    color: Colors.white,
                       child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      Text("  ${data["name"]}"),
-                      Text("Total : ${data["total-money"]}"),
-                      Text("Pay : ${data["pay"]}"),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text("Name: ${data["name"]}"),
+                           Text("Date: ${data["date"]}"),
+                        ],
+                      ),
+                      Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text("Total : ${data["total-money"]}"),
+                          Text("Interest : ${data["interest"]}"),
+
+                        ],
+                      ),
+                      Column(
+                           mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text("Pay : ${data["pay"]}"),
+                          Text("Rest : ${data["rest-money"]}"),
+                  
+                        ],
+                      ),
                       IconButton(
                         onPressed: () {
                           showDialog(

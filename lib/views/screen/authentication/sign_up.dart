@@ -64,12 +64,13 @@ class _SignUpPageState extends State<SignUpPage> {
             key: _form,
             child: Column(
               children: [
-                SizedBox(
-                  height: 250.h,
-                  width: 250.w,
-                  child: Center(child: Image.asset("assets/images/Login.gif")),
+                const SizedBox(height: 100,),
+                Align(
+                  alignment: Alignment.center,
+                  child: const Text("Create new account",
+                      style: TextStyle(fontSize: 30, color: Colors.black)),
                 ),
-                SizedBox(height: 20.h),
+                SizedBox(height: 50.h),
                 CustomTextField(
                     childText: " আপনার পুরো নাম লিখুন",
                     labelText: "নাম",

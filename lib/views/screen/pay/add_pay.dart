@@ -9,6 +9,7 @@ import 'package:gold_manager_update/views/const/widget/custom_button.dart';
 import 'package:gold_manager_update/views/const/widget/custom_text_field_five.dart';
 import 'package:gold_manager_update/views/const/widget/date_picker.dart';
 
+
 import 'package:gold_manager_update/views/screen/home_page/home.dart';
 import 'package:lottie/lottie.dart';
 
@@ -95,7 +96,7 @@ class _AddPayState extends State<AddPay> {
                   Container(
                     width: 100.w,
                     color: Colors.white,
-                    child: CustomDatePicker(controller: _dateController),
+                    child: DatePickerTextField(controller: _dateController),
                   )
                 ],
               ),

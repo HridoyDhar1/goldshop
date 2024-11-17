@@ -86,7 +86,7 @@ class _OthersState extends State<Others> {
                   child: ListTile(
                 leading: Icon(
                   Icons.dashboard_sharp,
-                  color: Color.fromARGB(255, 32, 168, 247),
+                  color: Colors.greenAccent,
                 ),
                 title: Text("কাজ দিন"),
                 trailing: Icon(
@@ -104,7 +104,7 @@ class _OthersState extends State<Others> {
                   child: ListTile(
                 leading: Icon(
                   Icons.dashboard_sharp,
-                  color: Colors.redAccent,
+                  color: Colors.greenAccent,
                 ),
                 title: Text("অন্যান খরচ করুন"),
                 trailing: Icon(
@@ -122,7 +122,7 @@ class _OthersState extends State<Others> {
                   child: ListTile(
                 leading: Icon(
                   Icons.dashboard_sharp,
-                  color: Colors.lightBlueAccent,
+                  color: Colors.greenAccent,
                 ),
                 title: Text("টাকা দিন"),
                 trailing: Icon(
@@ -145,7 +145,7 @@ class _OthersState extends State<Others> {
                 title: Text("কিনুন"),
                 trailing: Icon(
                   Icons.arrow_forward_outlined,
-                  color: Colors.greenAccent,
+                  color:Colors.purpleAccent,
                 ),
               )),
             ),
@@ -163,7 +163,7 @@ class _OthersState extends State<Others> {
                 title: Text("নতুন বন্ধক দিন"),
                 trailing: Icon(
                   Icons.arrow_forward_outlined,
-                  color: Colors.greenAccent,
+                  color: Colors.purpleAccent,
                 ),
               )),
             ),
@@ -182,7 +182,7 @@ class _OthersState extends State<Others> {
                 title: Text("নতুন বিক্রি করুন"),
                 trailing: Icon(
                   Icons.arrow_forward_outlined,
-                  color: Colors.greenAccent,
+                  color: Colors.purpleAccent,
                 ),
               )),
             ),
@@ -200,7 +200,7 @@ class _OthersState extends State<Others> {
                 title: Text("নতুন কর্মচারী"),
                 trailing: Icon(
                   Icons.arrow_forward_outlined,
-                  color: Colors.greenAccent,
+                  color: Colors.purpleAccent,
                 ),
               )),
             ),
@@ -213,12 +213,12 @@ class _OthersState extends State<Others> {
                   child: ListTile(
                 leading: Icon(
                   Icons.dashboard_sharp,
-                  color: Colors.purpleAccent,
+                  color: Colors.black,
                 ),
                 title: Text("কাজ করছে"),
                 trailing: Icon(
                   Icons.arrow_forward_outlined,
-                  color: Colors.greenAccent,
+                  color: Colors.black,
                 ),
               )),
             )

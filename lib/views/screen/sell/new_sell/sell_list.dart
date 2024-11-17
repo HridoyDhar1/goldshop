@@ -54,7 +54,7 @@ class _SellListState extends State<SellList> {
                 color: Colors.black,
               )),
           title: Text(
-            "বিক্রি লিস্ট",
+            "Sell List",
             style: AllTextStyle().employeeName,
           ),
         ),
@@ -196,7 +196,7 @@ class _SellListState extends State<SellList> {
                                     children: [
                                       Text(" ${data["name"]}"),
                                       Spacer(),
-                                      Text("${data["pay"]} টাকা"),
+                                      Text("${data["pay"]} Taka"),
                                       SizedBox(
                                         width: 10.w,
                                       ),

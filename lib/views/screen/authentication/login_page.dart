@@ -31,12 +31,23 @@ class _LoginPageState extends State<LoginPage> {
             key: _form,
             child: Column(
               children: [
-                SizedBox(
-                  height: 250.h,
-                  width: 250.w,
-                  child: Center(child: Image.asset("assets/images/Login.gif")),
+                const SizedBox(
+                  height: 80,
                 ),
-                SizedBox(height: 20.h),
+                Container(
+                  height: 200,
+                  width: 200,
+                  child: Image.asset("assets/images/appicon.png"),
+                ),
+                Align(
+                    alignment: Alignment.bottomLeft,
+                    child: const Text('Hey', style: TextStyle(fontSize: 30))),
+                Align(
+                  alignment: Alignment.bottomLeft,
+                  child: const Text("Welcome back !",
+                      style: TextStyle(fontSize: 30, color: Colors.grey)),
+                ),
+                SizedBox(height: 50.h),
                 CustomTextField(
                     childText: "আপনার ইমেইল দিন",
                     labelText: 'ইমেইল',
@@ -66,7 +77,7 @@ class _LoginPageState extends State<LoginPage> {
                     },
                     child: const Text(
                       "পাসওয়ার্ড ভুলে গেছেন?",
-                      style: TextStyle(color: AppColor.appColor),
+                      style: TextStyle(color: Color.fromARGB(255, 245, 6, 6)),
                       textAlign: TextAlign.right,
                     ),
                   ),
