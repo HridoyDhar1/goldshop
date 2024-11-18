@@ -251,7 +251,7 @@ class _NewMortgageListState extends State<NewMortgageList> {
                                           tenPoint: data["ten_point"],
                                           totalMoney: data["total_money"],
                                           totalWeight: data["total_weight"],
-                                          parcent: data["parcent"],
+                                          parcent: data["parcent"], 
                                         )));
                           },
                           // child: Card(

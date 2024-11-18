@@ -14,6 +14,7 @@ import '../home_page/home.dart';
 
 class NewMortgageSearchPageDetails extends StatefulWidget {
   var name;
+
   var address;
   var phone;
   var date;
@@ -79,6 +80,7 @@ class NewMortgageSearchPageDetails extends StatefulWidget {
   NewMortgageSearchPageDetails({
     Key? key,
     required this.name,
+
     required this.address,
     required this.date,
     required this.phone,
@@ -238,7 +240,14 @@ class _NewMortgageSearchPageDetailsState
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-             
+            Center(
+                      child: CircleAvatar(
+                          backgroundColor: Colors.grey.shade300,
+                          radius: 60.r,
+                          backgroundImage:
+                              const AssetImage("assets/images/profile.png")),
+                    ),
+                    Divider(),
                     SizedBox(height: 10.h),
                     Text("Name : ${widget.name}", style: AllTextStyle().goldName),
                     SizedBox(height: 10.h),

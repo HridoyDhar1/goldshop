@@ -5,6 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gold_manager_update/views/const/Theme/all_text_style.dart';
 import 'package:gold_manager_update/views/const/Theme/app_color.dart';
 import 'package:gold_manager_update/views/const/widget/custom_button.dart';
+
 import 'package:gold_manager_update/views/screen/sell/new_sell/sell_image_preview.dart';
 
 class SellSearchDetailsPage extends StatelessWidget {
@@ -177,7 +178,14 @@ class SellSearchDetailsPage extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                 
+                  Center(
+                      child: CircleAvatar(
+                          backgroundColor: Colors.grey.shade300,
+                          radius: 60.r,
+                          backgroundImage:
+                              const AssetImage("assets/images/profile.png")),
+                    ),
+                    Divider(),
                     SizedBox(height: 10.h),
                     Text("Name : ${name}", style: AllTextStyle().goldName),
                     SizedBox(height: 10.h),
@@ -449,7 +457,9 @@ class SellSearchDetailsPage extends StatelessWidget {
                     SizedBox(height: 60.h),
             Center(
               
-              child: CustomButton(text: "Print", onAction: (){}))
+              child: CustomButton(text: "Print", onAction: (){
+                // createPDF();
+              }))
                   ],
                 ),
               ),

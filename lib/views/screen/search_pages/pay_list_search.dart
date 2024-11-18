@@ -62,7 +62,7 @@ class _PayListSearchState extends State<PayListSearch> {
                             return Card(
                                 child: ListTile(
                               title: Text("${data["name"]}"),
-                              trailing: Text("${data["money"]} Tk".toString()),
+                              trailing: Text("${data["money"]} Taka".toString()),
                             ));
                           },
                         ).toList());

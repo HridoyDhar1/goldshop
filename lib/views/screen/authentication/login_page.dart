@@ -49,8 +49,8 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 SizedBox(height: 50.h),
                 CustomTextField(
-                    childText: "আপনার ইমেইল দিন",
-                    labelText: 'ইমেইল',
+                    childText: "Enter your email",
+                    labelText: 'Email',
                     keyBoardType: TextInputType.emailAddress,
                     controller: _emailController,
                     prefixIcon: const Icon(
@@ -59,8 +59,8 @@ class _LoginPageState extends State<LoginPage> {
                     )),
                 SizedBox(height: 20.h),
                 CustomTextField(
-                    childText: "আপনার পাসওয়ার্ড দিন",
-                    labelText: 'পাসওয়ার্ড',
+                    childText: "Enter your password",
+                    labelText: 'Password',
                     keyBoardType: TextInputType.text,
                     controller: _passwordController,
                     prefixIcon: const Icon(
@@ -76,14 +76,14 @@ class _LoginPageState extends State<LoginPage> {
                           MaterialPageRoute(builder: (_) => EmailVerifyPage()));
                     },
                     child: const Text(
-                      "পাসওয়ার্ড ভুলে গেছেন?",
+                      "Forget pasword",
                       style: TextStyle(color: Color.fromARGB(255, 245, 6, 6)),
                       textAlign: TextAlign.right,
                     ),
                   ),
                 ),
                 CustomButton(
-                    text: "লগ ইন",
+                    text: "Login",
                     onAction: () async {
                       if (_form.currentState!.validate()) {
                         final userEmail = _emailController.text;
@@ -97,7 +97,7 @@ class _LoginPageState extends State<LoginPage> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Text("আপনার আকাউন্ট নেই?",
+                    const Text("Haven't any account !",
                         style: TextStyle(color: Colors.black)),
                     TextButton(
                       onPressed: () {
@@ -105,7 +105,7 @@ class _LoginPageState extends State<LoginPage> {
                             MaterialPageRoute(builder: (_) => SignUpPage()));
                       },
                       child: const Text(
-                        "সাইন আপ",
+                        "Singup",
                         style: TextStyle(
                             fontWeight: FontWeight.w500, color: Colors.blue),
                       ),

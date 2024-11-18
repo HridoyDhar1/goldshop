@@ -609,7 +609,7 @@ class _NewMortgageState extends State<NewMortgage> {
               color: Colors.black,
             )),
         title: Text(
-          "নতুন বন্ধক",
+          "New Mortgage",
           style: AllTextStyle().employeeName,
         ),
       ),
@@ -622,28 +622,28 @@ class _NewMortgageState extends State<NewMortgage> {
             child: Column(
               children: [
                 CustomTextFieldTwo(
-                  childText: "দোকানের নাম ",
+                  childText: "Shop Name ",
                   controller: _shopNameController,
                   prefixIcon: const Icon(Icons.shopping_cart),
                   keyboardType: TextInputType.text,
                 ),
                 SizedBox(height: 05.h),
                 CustomTextFieldTwo(
-                  childText: "নাম",
+                  childText: "Name",
                   controller: _nameController,
                   prefixIcon: const Icon(Icons.person),
                   keyboardType: TextInputType.text,
                 ),
                 SizedBox(height: 05.h),
                 CustomTextFieldTwo(
-                  childText: "ঠিকানা",
+                  childText: "Address",
                   controller: _addressController,
                   prefixIcon: const Icon(Icons.location_on_sharp),
                   keyboardType: TextInputType.text,
                 ),
                 SizedBox(height: 05.h),
                 CustomTextFieldTwo(
-                  childText: "নাম্বার",
+                  childText: "Phone Number",
                   controller: _numberController,
                   prefixIcon: const Icon(Icons.call),
                   keyboardType: TextInputType.number,
@@ -788,7 +788,7 @@ class _NewMortgageState extends State<NewMortgage> {
                           ),
                           Flexible(
                             child: CustomTextFieldTwo(
-                              childText: "টাকা",
+                              childText: "Taka",
                               controller: _productMoneyController,
                               prefixIcon: const Icon(Icons.attach_money),
                               keyboardType: TextInputType.number,
